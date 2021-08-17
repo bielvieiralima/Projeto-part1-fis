@@ -3,6 +3,31 @@ from math import *
 c = 3*(10**8)
 pi = 3.1415
 
+def Freq():
+    f = float(input("Digite a frequência da onda: "))
+    λ = c/f
+    w = 2*pi*f
+    k = w/c
+
+    print("\nO comprimento de onda é %.3f m" %λ)
+    print("O tipo de onda é: ", end='')
+
+    if f >= (10**20):
+        print("Raios Gama")
+    elif f >= (10**18):
+        print("Raios-X")
+    elif f >= (10**16):
+        print("Luz Ultravioleta")
+    elif f >= (10**12):
+        print("Luz Infravermelho")
+    elif f >= (10**10):
+        print("Microondas")
+    else:
+        print("Rádio")
+
+    print("O valor de w é de %.3f rad/s" %w)
+    print("O número da onda (k) é %.9f" %k)
+
 def comprimento_de_onda():
     comprimento = float(input("Digite o comprimento de onda: "))
     print()
